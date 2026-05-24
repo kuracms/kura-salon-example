@@ -28,13 +28,13 @@ useSeoMeta({
         </div>
         <div class="hero-photos" aria-hidden="true">
           <div class="hero-photo hero-photo--coast">
-            <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1200&auto=format&fit=crop&q=80" alt="" loading="eager" />
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop&q=80" alt="" loading="eager" />
           </div>
           <div class="hero-photo hero-photo--cut">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&auto=format&fit=crop&q=80" alt="" loading="eager" />
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=700&auto=format&fit=crop&q=80" alt="" loading="eager" />
           </div>
           <div class="hero-photo hero-photo--colour">
-            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&auto=format&fit=crop&q=80" alt="" loading="eager" />
+            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=700&auto=format&fit=crop&q=80" alt="" loading="eager" />
           </div>
         </div>
       </div>
