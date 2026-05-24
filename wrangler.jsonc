@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kura-salon-example",
+  "main": ".output/server/index.mjs",
+  "compatibility_date": "2025-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".output/public/",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "NUXT_PUBLIC_KURA_BASE_URL": "https://kuracms.com",
+    "NUXT_PUBLIC_KURA_PROJECT": "salon",
+    "NUXT_PUBLIC_KURA_TOKEN": "kr_live_FAuAfmHpoeRnzJaWZc56lfx8pc7tt"
+  },
+  "routes": [{ "pattern": "salon.kuracms.com", "custom_domain": true, "zone_name": "kuracms.com" }]
+}

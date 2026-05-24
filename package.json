@@ -1,0 +1,20 @@
+{
+  "name": "kura-salon-example",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Example Nuxt 3 site reading from a kura content backend. An east-London hair salon at salon.kuracms.com.",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "wrangler dev",
+    "deploy": "nuxt build && wrangler deploy"
+  },
+  "devDependencies": {
+    "nuxt": "^3.15.0",
+    "wrangler": "^4.93.1"
+  },
+  "dependencies": {
+    "marked": "^14.1.0",
+    "vue": "^3.5.0"
+  }
+}

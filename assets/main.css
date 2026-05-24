@@ -1,0 +1,383 @@
+/* Bloom Salon - light pastel palette.
+ *
+ * Deliberately distinct from the other kura demos (property in calm earth
+ * tones, bistro dark/sophisticated, escape vintage). Soft pink-cream
+ * backgrounds, warm gold accent, serif display + clean sans body.
+ */
+
+:root {
+  --bg: #fdf7f4;
+  --bg-soft: #f7e9e3;
+  --ink: #2a1f1d;
+  --muted: #8a6c64;
+  --faint: #b8a097;
+  --line: #ead9d2;
+  --line-strong: #d9bfb4;
+  --accent: #c08a6b;
+  --accent-strong: #a06949;
+  --pink: #e9b8b2;
+  --gold: #c7a96b;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  margin: 0 0 0.7em;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: 400;
+}
+h2 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+a {
+  color: var(--accent-strong);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+a:hover {
+  color: var(--ink);
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-narrow {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ---------------- Header ---------------- */
+.hdr {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.hdr-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hdr-brand {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+.hdr-brand:hover {
+  color: var(--accent-strong);
+}
+.hdr-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.hdr-nav a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+.hdr-nav a:hover,
+.hdr-nav a.active {
+  color: var(--ink);
+}
+.hdr-cta {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+.hdr-cta:hover {
+  background: var(--accent-strong);
+  color: var(--bg);
+}
+
+@media (max-width: 640px) {
+  .hdr-nav {
+    gap: 1rem;
+  }
+  .hdr-nav a:not(.hdr-cta) {
+    display: none;
+  }
+}
+
+/* ---------------- Hero on home ---------------- */
+.hero {
+  padding: 4.5rem 0 4rem;
+  background:
+    radial-gradient(ellipse at top left, var(--bg-soft) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom right, #f3dedb 0%, transparent 50%), var(--bg);
+}
+.hero-eyebrow {
+  margin-bottom: 1.2rem;
+}
+.hero h1 {
+  max-width: 18ch;
+}
+.hero-sub {
+  max-width: 38ch;
+  color: var(--muted);
+  font-size: 1.08rem;
+  margin-top: 0.5rem;
+}
+.hero-actions {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--bg);
+}
+.btn-primary:hover {
+  background: var(--accent-strong);
+  color: var(--bg);
+}
+.btn-ghost {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* ---------------- Body content (rendered markdown) ---------------- */
+.prose {
+  max-width: 38rem;
+}
+.prose h2 {
+  margin-top: 2.5rem;
+}
+.prose strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.prose ul {
+  padding-left: 1.2rem;
+}
+.prose li {
+  margin-bottom: 0.4rem;
+}
+
+/* ---------------- Services list ---------------- */
+.svc-page {
+  padding: 4rem 0 5rem;
+}
+.svc-section {
+  margin-top: 3.5rem;
+}
+.svc-section:first-of-type {
+  margin-top: 1rem;
+}
+.svc-cat {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+.svc-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.4rem 1.5rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+.svc-row:last-child {
+  border-bottom: 0;
+}
+.svc-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.svc-pop {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  background: var(--bg-soft);
+  color: var(--accent-strong);
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  vertical-align: 2px;
+  font-weight: 500;
+}
+.svc-meta {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+  grid-column: 1 / 2;
+}
+.svc-price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  grid-row: 1;
+  grid-column: 2;
+  text-align: right;
+}
+.svc-price-free {
+  color: var(--accent-strong);
+  font-style: italic;
+}
+
+/* ---------------- Stylist cards ---------------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.2rem;
+  margin-top: 2.5rem;
+}
+.team-card {
+  text-align: center;
+}
+.team-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  background: var(--bg-soft);
+}
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.06) saturate(1.05);
+}
+.team-card h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.2rem;
+}
+.team-card .role {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.7rem;
+}
+.team-card .bio {
+  color: var(--muted);
+  font-size: 0.94rem;
+  text-align: left;
+}
+
+/* ---------------- Section block ---------------- */
+.section {
+  padding: 5rem 0;
+}
+.section-head {
+  margin-bottom: 2rem;
+}
+
+/* ---------------- Footer ---------------- */
+.ftr {
+  border-top: 1px solid var(--line);
+  padding: 3rem 1.5rem 2.5rem;
+  margin-top: 4rem;
+  background: var(--bg-soft);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.ftr-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+.ftr-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.ftr-links a {
+  color: var(--muted);
+}
+.ftr-links a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 540px) {
+  .ftr-inner {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
