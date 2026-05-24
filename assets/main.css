@@ -131,6 +131,8 @@ a:hover {
 .hdr-nav a.active {
   color: var(--ink);
 }
+/* Higher specificity than .hdr-nav a so the white text wins. */
+.hdr-nav a.hdr-cta,
 .hdr-cta {
   background: var(--accent-strong);
   color: #ffffff;
@@ -138,7 +140,9 @@ a:hover {
   border-radius: 999px;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
+  text-transform: none;
 }
+.hdr-nav a.hdr-cta:hover,
 .hdr-cta:hover {
   background: var(--ink);
   color: #ffffff;
