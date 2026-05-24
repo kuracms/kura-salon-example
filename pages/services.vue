@@ -39,8 +39,11 @@ useSeoMeta({
                 {{ s.duration_min }} mins<span v-if="s.description">. {{ s.description }}</span>
               </div>
             </div>
-            <div class="svc-price" :class="{ 'svc-price-free': s.price_nzd === 0 }">
-              {{ formatNzd(s.price_nzd) }}
+            <div class="svc-row-end">
+              <div class="svc-price" :class="{ 'svc-price-free': s.price_nzd === 0 }">
+                {{ formatNzd(s.price_nzd) }}
+              </div>
+              <NuxtLink class="svc-book" :to="`/book?service=${s.slug}`">Book</NuxtLink>
             </div>
           </div>
         </section>

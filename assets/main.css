@@ -350,6 +350,33 @@ a:hover {
   color: var(--accent-strong);
   font-style: italic;
 }
+.svc-row-end {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+.svc-book {
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent-strong);
+  border: 1px solid var(--line-strong);
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+.svc-book:hover {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #ffffff;
+}
 
 /* ---------------- Stylist cards ---------------- */
 .team-grid {

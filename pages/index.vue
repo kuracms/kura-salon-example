@@ -22,8 +22,8 @@ useSeoMeta({
             four stylists, ten minutes from the harbour.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:+6495550070">Call to book</a>
-            <NuxtLink class="btn btn-ghost" to="/services">See our services</NuxtLink>
+            <NuxtLink class="btn btn-primary" to="/book">Book online</NuxtLink>
+            <a class="btn btn-ghost" href="tel:+6495550070">Or call 09 555 0070</a>
           </div>
         </div>
         <div class="hero-photos" aria-hidden="true">
