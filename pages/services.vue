@@ -39,8 +39,8 @@ useSeoMeta({
                 {{ s.duration_min }} mins<span v-if="s.description">. {{ s.description }}</span>
               </div>
             </div>
-            <div class="svc-price" :class="{ 'svc-price-free': s.price_gbp === 0 }">
-              {{ formatGbp(s.price_gbp) }}
+            <div class="svc-price" :class="{ 'svc-price-free': s.price_nzd === 0 }">
+              {{ formatNzd(s.price_nzd) }}
             </div>
           </div>
         </section>

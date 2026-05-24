@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: "Visit us - Bloom",
-  description: "Bloom Salon, 47 Mare Street, Hackney. Tue-Sat 9-7.",
+  description: "Bloom Salon, 124 Ponsonby Road, Auckland. Tue-Sat 9-7.",
 });
 </script>
 
@@ -12,14 +12,15 @@ useSeoMeta({
       <h1>Pop in</h1>
 
       <p style="color: var(--muted); max-width: 36rem;">
-        We're a five-minute walk from London Fields station, on the corner
-        opposite the pub. Look for the rose-pink shopfront.
+        We're on Ponsonby Road, opposite the SPQR end of the strip and a
+        ten-minute walk from the Wynyard waterfront. Look for the rose-pink
+        shopfront and the kelpie at the window.
       </p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
         <div>
           <p class="eyebrow" style="margin-bottom: 0.6rem;">Address</p>
-          <p style="margin: 0;">47 Mare Street<br />London E8 4RP</p>
+          <p style="margin: 0;">124 Ponsonby Road<br />Auckland 1011</p>
         </div>
         <div>
           <p class="eyebrow" style="margin-bottom: 0.6rem;">Hours</p>
@@ -32,8 +33,8 @@ useSeoMeta({
         <div>
           <p class="eyebrow" style="margin-bottom: 0.6rem;">Get in touch</p>
           <p style="margin: 0;">
-            <a href="tel:+442081234567">020 8123 4567</a><br />
-            <a href="mailto:hello@bloomsalon.example">hello@bloomsalon.example</a>
+            <a href="tel:+6495554070">09 555 4070</a><br />
+            <a href="mailto:kiaora@bloomsalon.example">kiaora@bloomsalon.example</a>
           </p>
         </div>
       </div>

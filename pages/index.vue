@@ -21,7 +21,7 @@ useSeoMeta({
           stylists, no airs.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="tel:+442081234567">Call to book</a>
+          <a class="btn btn-primary" href="tel:+6495554070">Call to book</a>
           <NuxtLink class="btn btn-ghost" to="/services">See our services</NuxtLink>
         </div>
       </div>
@@ -46,7 +46,7 @@ useSeoMeta({
               <span class="svc-name">{{ s.name }}</span>
               <div class="svc-meta">{{ s.duration_min }} mins. {{ s.description }}</div>
             </div>
-            <div class="svc-price">{{ formatGbp(s.price_gbp) }}</div>
+            <div class="svc-price">{{ formatNzd(s.price_nzd) }}</div>
           </div>
         </div>
         <div style="margin-top: 2rem;">

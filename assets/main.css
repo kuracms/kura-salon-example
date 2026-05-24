@@ -154,11 +154,13 @@ a:hover {
 }
 
 /* ---------------- Hero on home ---------------- */
+/* Subtle Auckland coast: warm dune sand top-left, soft sea-mist green
+ * bottom-right, layered over the cream background. */
 .hero {
   padding: 4.5rem 0 4rem;
   background:
-    radial-gradient(ellipse at top left, var(--bg-soft) 0%, transparent 55%),
-    radial-gradient(ellipse at bottom right, #f3dedb 0%, transparent 50%), var(--bg);
+    radial-gradient(ellipse at top left, #f5e6d0 0%, transparent 55%),
+    radial-gradient(ellipse at bottom right, #d9e6db 0%, transparent 55%), var(--bg);
 }
 .hero-eyebrow {
   margin-bottom: 1.2rem;

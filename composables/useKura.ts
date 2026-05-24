@@ -24,7 +24,7 @@ export interface Service {
   name: string;
   category: "cut" | "colour" | "treatment" | "styling";
   duration_min: number;
-  price_gbp: number;
+  price_nzd: number;
   description?: string;
   photo?: string | null;
   popular?: boolean;
@@ -78,11 +78,11 @@ export function renderMarkdown(md: string): string {
   return marked.parse(md, { async: false }) as string;
 }
 
-export function formatGbp(n: number): string {
+export function formatNzd(n: number): string {
   if (n === 0) return "Free";
-  return new Intl.NumberFormat("en-GB", {
+  return new Intl.NumberFormat("en-NZ", {
     style: "currency",
-    currency: "GBP",
+    currency: "NZD",
     maximumFractionDigits: 0,
   }).format(n);
 }

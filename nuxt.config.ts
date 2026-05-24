@@ -10,15 +10,15 @@ export default defineNuxtConfig({
   css: ["~/assets/main.css"],
   app: {
     head: {
-      title: "Bloom - independent hair salon, east London",
-      htmlAttrs: { lang: "en-GB" },
+      title: "Bloom - hair salon on Ponsonby Road, Auckland",
+      htmlAttrs: { lang: "en-NZ" },
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
           name: "description",
           content:
-            "Independent hair salon in Hackney. Cuts, colour, balayage and treatments. Book online or walk in.",
+            "Hair salon on Ponsonby Road, Auckland. Cuts, colour, balayage and treatments. Book online or walk in.",
         },
       ],
       link: [

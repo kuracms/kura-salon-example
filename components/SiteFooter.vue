@@ -3,7 +3,7 @@
     <div class="ftr-inner">
       <div>
         <strong style="color: var(--ink); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500;">Bloom</strong>
-        &nbsp;-&nbsp; 47 Mare Street, London E8 4RP &nbsp;-&nbsp; 020 8123 4567
+        &nbsp;-&nbsp; 124 Ponsonby Road, Auckland 1011 &nbsp;-&nbsp; 09 555 4070
         <div style="margin-top: 0.4rem; font-size: 0.78rem;">
           Open Tue-Sat 9-7, closed Sun &amp; Mon. Last cut 1 hour before close.
         </div>
