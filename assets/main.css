@@ -132,16 +132,16 @@ a:hover {
   color: var(--ink);
 }
 .hdr-cta {
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--accent-strong);
+  color: #ffffff;
   padding: 0.55rem 1.1rem;
   border-radius: 999px;
   font-size: 0.85rem;
   letter-spacing: 0.05em;
 }
 .hdr-cta:hover {
-  background: var(--accent-strong);
-  color: var(--bg);
+  background: var(--ink);
+  color: #ffffff;
 }
 
 @media (max-width: 640px) {
@@ -154,13 +154,31 @@ a:hover {
 }
 
 /* ---------------- Hero on home ---------------- */
-/* Subtle Auckland coast: warm dune sand top-left, soft sea-mist green
- * bottom-right, layered over the cream background. */
+/* Two-column hero: copy on the left, three photographs on the right (the
+ * Auckland coastline overhead, two cropped salon shots beneath). The pastel
+ * sand+sea-mist gradient still sits behind so the brand ID stays intact. */
 .hero {
-  padding: 4.5rem 0 4rem;
+  position: relative;
+  padding: 4.5rem 0 5rem;
   background:
     radial-gradient(ellipse at top left, #f5e6d0 0%, transparent 55%),
     radial-gradient(ellipse at bottom right, #d9e6db 0%, transparent 55%), var(--bg);
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 820px) {
+  .hero-grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 4rem;
+  }
+}
+.hero-copy {
+  max-width: 32rem;
 }
 .hero-eyebrow {
   margin-bottom: 1.2rem;
@@ -180,6 +198,37 @@ a:hover {
   gap: 0.7rem;
   flex-wrap: wrap;
 }
+.hero-photos {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: auto auto;
+  gap: 0.9rem;
+  position: relative;
+}
+.hero-photo {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -28px rgba(70, 36, 26, 0.35);
+}
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-photo--coast {
+  grid-column: 1 / span 2;
+  aspect-ratio: 16 / 9;
+  filter: saturate(0.85) contrast(0.96);
+}
+.hero-photo--cut {
+  grid-column: 1 / span 1;
+  aspect-ratio: 1 / 1;
+}
+.hero-photo--colour {
+  grid-column: 2 / span 1;
+  aspect-ratio: 1 / 1;
+}
 .btn {
   display: inline-block;
   padding: 0.85rem 1.6rem;
@@ -193,12 +242,12 @@ a:hover {
     border-color 0.15s;
 }
 .btn-primary {
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--accent-strong);
+  color: #ffffff;
 }
 .btn-primary:hover {
-  background: var(--accent-strong);
-  color: var(--bg);
+  background: var(--ink);
+  color: #ffffff;
 }
 .btn-ghost {
   border-color: var(--line-strong);

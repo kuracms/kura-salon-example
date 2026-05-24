@@ -1,22 +1,19 @@
 <script setup lang="ts">
 const { data: stylists } = await useStylists();
+const { data: page } = await usePage("team");
 
 useSeoMeta({
-  title: "Team - Bloom",
-  description: "Meet the stylists at Bloom Salon, Hackney.",
+  title: () => (page.value?.title ? `${page.value.title} - Bloom` : "Team - Bloom"),
+  description: "Meet the stylists at Bloom Salon, Auckland.",
 });
 </script>
 
 <template>
   <main class="section">
     <div class="container">
-      <p class="eyebrow" style="margin-bottom: 1rem;">Who's in</p>
-      <h1>The team</h1>
-      <p style="color: var(--muted); max-width: 36rem;">
-        Three chairs, four stylists. We rotate so there's always someone in,
-        and we always tell you who you're booked with so you can request them
-        next time.
-      </p>
+      <p class="eyebrow" style="margin-bottom: 1rem;">{{ page?.subtitle ?? "Who's in" }}</p>
+      <h1>{{ page?.title ?? "The team" }}</h1>
+      <div v-if="page" class="prose" v-html="renderMarkdown(page.body)"></div>
 
       <div class="team-grid">
         <article v-for="s in (stylists ?? [])" :key="s.id" class="team-card">

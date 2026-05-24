@@ -3,9 +3,12 @@
     <div class="ftr-inner">
       <div>
         <strong style="color: var(--ink); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500;">Bloom</strong>
-        &nbsp;-&nbsp; 124 Ponsonby Road, Auckland 1011 &nbsp;-&nbsp; 09 555 4070
+        &nbsp;-&nbsp; 124 Ponsonby Road, Auckland 1011 &nbsp;-&nbsp; 09 555 0070
         <div style="margin-top: 0.4rem; font-size: 0.78rem;">
           Open Tue-Sat 9-7, closed Sun &amp; Mon. Last cut 1 hour before close.
+        </div>
+        <div style="margin-top: 0.55rem; font-size: 0.72rem; color: var(--faint);">
+          Demo site for <a href="https://kuracms.com" style="color: inherit; text-decoration: underline;">kura</a>. Address and phone number are fictional.
         </div>
       </div>
       <div class="ftr-links">

@@ -6,7 +6,7 @@
         <NuxtLink to="/services">services</NuxtLink>
         <NuxtLink to="/team">team</NuxtLink>
         <NuxtLink to="/visit">visit</NuxtLink>
-        <a class="hdr-cta" href="tel:+6495554070">Call to book</a>
+        <a class="hdr-cta" href="tel:+6495550070">Call to book</a>
       </nav>
     </div>
   </header>

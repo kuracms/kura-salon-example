@@ -13,16 +13,29 @@ useSeoMeta({
 <template>
   <main>
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow hero-eyebrow">{{ page?.subtitle ?? "Hackney, east London" }}</p>
-        <h1>{{ page?.title ?? "Bloom" }}</h1>
-        <p class="hero-sub">
-          Cutting, colouring and a bit of a chat since 2012. Three chairs, four
-          stylists, no airs.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="tel:+6495554070">Call to book</a>
-          <NuxtLink class="btn btn-ghost" to="/services">See our services</NuxtLink>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">{{ page?.subtitle ?? "Ponsonby Road, Auckland" }}</p>
+          <h1>{{ page?.title ?? "Bloom" }}</h1>
+          <p class="hero-sub">
+            Cutting, colouring and a bit of a chat since 2012. Three chairs,
+            four stylists, ten minutes from the harbour.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+6495550070">Call to book</a>
+            <NuxtLink class="btn btn-ghost" to="/services">See our services</NuxtLink>
+          </div>
+        </div>
+        <div class="hero-photos" aria-hidden="true">
+          <div class="hero-photo hero-photo--coast">
+            <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=1200&auto=format&fit=crop&q=80" alt="" loading="eager" />
+          </div>
+          <div class="hero-photo hero-photo--cut">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700&auto=format&fit=crop&q=80" alt="" loading="eager" />
+          </div>
+          <div class="hero-photo hero-photo--colour">
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&auto=format&fit=crop&q=80" alt="" loading="eager" />
+          </div>
         </div>
       </div>
     </section>

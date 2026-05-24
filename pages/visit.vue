@@ -1,6 +1,7 @@
 <script setup lang="ts">
+const { data: page } = await usePage("visit");
 useSeoMeta({
-  title: "Visit us - Bloom",
+  title: () => (page.value?.title ? `${page.value.title} - Bloom` : "Visit - Bloom"),
   description: "Bloom Salon, 124 Ponsonby Road, Auckland. Tue-Sat 9-7.",
 });
 </script>
@@ -8,14 +9,10 @@ useSeoMeta({
 <template>
   <main class="section">
     <div class="container-narrow">
-      <p class="eyebrow" style="margin-bottom: 1rem;">Visit</p>
-      <h1>Pop in</h1>
+      <p class="eyebrow" style="margin-bottom: 1rem;">{{ page?.subtitle ?? "Visit" }}</p>
+      <h1>{{ page?.title ?? "Pop in" }}</h1>
 
-      <p style="color: var(--muted); max-width: 36rem;">
-        We're on Ponsonby Road, opposite the SPQR end of the strip and a
-        ten-minute walk from the Wynyard waterfront. Look for the rose-pink
-        shopfront and the kelpie at the window.
-      </p>
+      <div v-if="page" class="prose" v-html="renderMarkdown(page.body)"></div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
         <div>
@@ -33,7 +30,7 @@ useSeoMeta({
         <div>
           <p class="eyebrow" style="margin-bottom: 0.6rem;">Get in touch</p>
           <p style="margin: 0;">
-            <a href="tel:+6495554070">09 555 4070</a><br />
+            <a href="tel:+6495550070">09 555 0070</a><br />
             <a href="mailto:kiaora@bloomsalon.example">kiaora@bloomsalon.example</a>
           </p>
         </div>
