@@ -55,7 +55,7 @@ async function kuraFetch<T>(path: string): Promise<T> {
 
 export function usePage(slug: string) {
   return useAsyncData(`page-${slug}`, async () => {
-    const r = await kuraFetch<KuraListResponse<Page>>(`/page?limit=10`);
+    const r = await kuraFetch<KuraListResponse<Page>>(`/global?limit=10`);
     return r.data.find((p) => p.slug === slug && p.published) ?? null;
   });
 }
